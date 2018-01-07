@@ -18,11 +18,17 @@
   - created_at: Unix timestamp
   - unique_action: Counter
   - total_action: Counter
+  - last_unique_action_at: Unix timestamp
+  - last_action_at: Unix timestamp
+  
  2. Table Name: action
   - id: Primary key
   - token: Foreign key to UUID of token_detail
-  - created_at: Unix timestamp
   - ip_address: String
+  - user_agent: String
+  - other: String
+  - created_at: Unix timestamp
+  
   
 (Note: Column type is defined for Cassandra.)
 
